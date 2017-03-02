@@ -2,7 +2,7 @@
 	
 	var bookmarkletId = "videodownloader";
 	
-	var bookmarkletUrl = "https://rawgit.com/lukas2005/VideoDownloader/master/main.js";
+	var bookmarkletUrl = "https://rawgit.com/lukas2005/VideoDownloader/master/src/main.js";
 	
 	if (document.getElementById(bookmarkletId) == null) {
 

@@ -15,3 +15,7 @@ set var
 echo ^<a href="javascript:%var1%"^>Video Downloader^</a^>>web/index.html
 
 rm bookmarkletugly.js
+
+call git add *
+call git commit -m "Auto Generated Update" -a
+call git push
