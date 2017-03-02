@@ -30,16 +30,29 @@ if (!($ = window.jQuery)) {
 }
  
 function start() {
-	alert(window.location.href);
-	if (document.href) {
+	if (window.location.href.indexOf("youtube") != -1) {
 	
+		youtube();
 		
+	} else if (window.location.href.indexOf("cda") != -1) {
+		
+		cda();
+		
+	} else {
+		
+		alert('Unknown site please report this to me at lukas2005.38@gmail.com please make the title "VideoDownloader Issuse: ' + window.location.href + '" thank you for mailing me');
 		
 	}
 }
 
 function youtube() {
 	
+	alert("we are on youtube :)");
 	
+}
+
+function cda() {
+	
+	alert("we are on cda.pl :)");
 	
 }
