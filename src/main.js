@@ -30,7 +30,7 @@ if (!($ = window.jQuery)) {
 }
  
 function start() {
-	alert(document.href);
+	alert(window.location.href);
 	if (document.href) {
 	
 		
