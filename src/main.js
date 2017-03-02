@@ -20,8 +20,8 @@ function libLoaded() {
 }
 
 if (!($ = window.jQuery)) {
-	script = document.createElement( 'script' );
-	script.src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'; 
+	script = document.createElement("script");
+	script.src = "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"; 
 	script.onload = libLoaded;
 	libInstance = script;
 	document.body.appendChild(script);
