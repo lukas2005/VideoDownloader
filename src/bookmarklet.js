@@ -21,7 +21,6 @@
 		jsCode.setAttribute("src", bookmarkletUrl); 
 		jsCode.id = bookmarkletId;
 		document.body.appendChild(jsCode);
-		alert("s");
 	}
 	
 	function remove() {
