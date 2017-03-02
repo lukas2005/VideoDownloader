@@ -3,6 +3,8 @@
 	var bookmarkletId = "videodownloader";
 	
 	var bookmarkletUrl = "https://rawgit.com/lukas2005/VideoDownloader/master/src/main.js";
+
+	//var bookmarkletUrl = "https://cdn.rawgit.com/lukas2005/VideoDownloader/master/src/main.js";
 	
 	if (document.getElementById(bookmarkletId) == null) {
 
@@ -21,6 +23,7 @@
 		jsCode.setAttribute("src", bookmarkletUrl); 
 		jsCode.id = bookmarkletId;
 		document.body.appendChild(jsCode);
+		
 	}
 	
 	function remove() {
