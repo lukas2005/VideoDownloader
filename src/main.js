@@ -63,7 +63,9 @@ function cdax(url) {
 	
 	var urlArray = url.split("/");
 	
-	window.location.href = cdaxUrl + urlArray[3] + "/" + urlArray[4];
+	var urlMod = cdaxUrl + urlArray[3] + "/" + urlArray[4];
+	
+	alert(urlMod);
 	
 	alert("Note: cdax.pl is not my website");
 	
