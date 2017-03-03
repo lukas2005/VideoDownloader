@@ -47,9 +47,9 @@ function start() {
 
 function youtube() {
 	
-	alert("we are on youtube :)");
-	
 	window.location.href = "http://keepvid.com/?url=" + window.location.href;
+	
+	alert("Note keepvid.com is not my website");
 	
 }
 
