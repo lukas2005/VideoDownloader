@@ -49,6 +49,8 @@ function youtube() {
 	
 	alert("we are on youtube :)");
 	
+	window.location.href = "http://keepvid.com/?url=" + window.location.href;
+	
 }
 
 function cda() {
