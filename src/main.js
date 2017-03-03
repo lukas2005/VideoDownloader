@@ -5,6 +5,9 @@ var libInstance = null;
 
 var bookmarkletId = "videodownloader";
 
+var cdaxUrl = "https://cdax.pl/";
+var keepvidUrl = "http://keepvid.com/?url=";
+
 function libLoaded() {
 	
 	loadedLibs++;
@@ -28,9 +31,6 @@ if (!($ = window.jQuery)) {
 } else {
 	start()
 }
- 
-var cdaxUrl = "https://cdax.pl/";
-var keepvidUrl = "http://keepvid.com/?url=";
  
 function start() {
 	
