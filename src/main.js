@@ -45,7 +45,7 @@ function start() {
 	}
 }
 
-var insert = function(string, idx, rem, str) {
+function insert(string, idx, rem, str) {
     return string.slice(0, idx) + str + string.slice(idx + Math.abs(rem));
 };
 
