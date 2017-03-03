@@ -32,15 +32,21 @@ if (!($ = window.jQuery)) {
 	start()
 }
  
+String.prototype.contains = function(substring) {
+	
+	return self.indexOf("youtube") != -1;
+	
+}
+ 
 function start() {
 	
 	var url = window.location.href;
 	
-	if (url.indexOf("youtube") != -1) {
+	if (url.contains("youtube") || url.contains("dailymotion") || url.contains("instagram") || url.contains("vimeo") || url.contains("discovery")) {
 	
 		keepvid(url);
 		
-	} else if (url.indexOf("cda") != -1) {
+	} else if (url.contains("cda")) {
 		
 		cdax(url);
 		
