@@ -34,7 +34,7 @@ if (!($ = window.jQuery)) {
  
 String.prototype.contains = function(substring) {
 	
-	return self.indexOf("youtube") != -1;
+	return this.indexOf("youtube") != -1;
 	
 }
  
