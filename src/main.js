@@ -67,9 +67,15 @@ function start() {
 // Downloading websites
 function keepvid(url) {
 	
-	window.location.href = keepvidUrl + url;
-	
-	alert("Note: keepvid.com is not my website");
+	if (url.contains("dailymotion") || url.contains("vimeo")) {
+		
+		alert("You need the KeepVid Helper Extension (http://keepvid.com/extensions) to download from this website after installing refresh this page and click download button");
+		
+	} else {
+		
+		window.location.href = keepvidUrl + url;
+		
+	}
 	
 }
 
