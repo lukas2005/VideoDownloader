@@ -59,7 +59,7 @@ function youtube() {
 
 function cda() {
 	
-	var url = insert(window.location.href, window.location.href.indexOf("cda"), 0, "x")
+	var url = insert(window.location.href, window.location.href.indexOf("cda")+3, 0, "x")
 	
 	alert(url);
 	
