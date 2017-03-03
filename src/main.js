@@ -53,7 +53,7 @@ function youtube() {
 	
 	window.location.href = "http://keepvid.com/?url=" + window.location.href;
 	
-	alert("Note keepvid.com is not my website");
+	alert("Note: keepvid.com is not my website");
 	
 }
 
@@ -61,6 +61,10 @@ function cda() {
 	
 	var url = window.location.href.insert(window.location.href.indexOf("cda"), 0, "x")
 	
+	alert(url);
+	
 	window.location.href = url;
+	
+	alert("Note: cdax.pl is not my website");
 	
 }
