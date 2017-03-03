@@ -29,39 +29,41 @@ if (!($ = window.jQuery)) {
 	start()
 }
  
+var cdaxUrl = "https://cdax.pl/";
+var keepvidUrl = "http://keepvid.com/?url=";
+ 
 function start() {
-	if (window.location.href.indexOf("youtube") != -1) {
 	
-		youtube();
+	var url = window.location.href;
+	
+	if (url.indexOf("youtube") != -1) {
+	
+		keepvid(url);
 		
-	} else if (window.location.href.indexOf("cda") != -1) {
+	} else if (url.indexOf("cda") != -1) {
 		
-		cda();
+		cdax(url);
 		
 	} else {
 		
-		alert('Unknown site please report this to me at lukas2005.38@gmail.com please make the title "VideoDownloader Issuse: ' + window.location.href + '" thank you for mailing me');
+		alert('Unknown site please report this to me at lukas2005.38@gmail.com');
 		
 	}
 }
 
-function insert(string, idx, rem, str) {
-    return string.slice(0, idx) + str + string.slice(idx + Math.abs(rem));
-};
-
-function youtube() {
+function keepvid(url) {
 	
-	window.location.href = "http://keepvid.com/?url=" + window.location.href;
+	window.location.href = keepvidUrl + url;
 	
 	alert("Note: keepvid.com is not my website");
 	
 }
 
-function cda() {
+function cdax(url) {
 	
-	var url = insert(window.location.href, window.location.href.indexOf("cda")+3, 0, "x")
+	urlArray = url.split("/");
 	
-	window.location.href = url;
+	window.location.href = cdaxUrl + urlArray[3] + "/" + urlArray[4];
 	
 	alert("Note: cdax.pl is not my website");
 	
