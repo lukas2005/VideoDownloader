@@ -61,7 +61,7 @@ function keepvid(url) {
 
 function cdax(url) {
 	
-	urlArray = url.split("/");
+	var urlArray = url.split("/");
 	
 	window.location.href = cdaxUrl + urlArray[3] + "/" + urlArray[4];
 	
