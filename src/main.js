@@ -45,8 +45,8 @@ function start() {
 	}
 }
 
-String.prototype.insert = function(idx, rem, str) {
-    return this.slice(0, idx) + str + this.slice(idx + Math.abs(rem));
+var insert = function(string, idx, rem, str) {
+    return string.slice(0, idx) + str + string.slice(idx + Math.abs(rem));
 };
 
 function youtube() {
@@ -59,7 +59,7 @@ function youtube() {
 
 function cda() {
 	
-	var url = window.location.href.insert(window.location.href.indexOf("cda"), 0, "x")
+	var url = insert(window.location.href, window.location.href.indexOf("cda"), 0, "x")
 	
 	alert(url);
 	
