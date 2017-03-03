@@ -1,13 +1,16 @@
+// Helper vars
 var totalLibs = 1;
 var loadedLibs = 0;
-
 var libInstance = null;
 
+// Unique id of bookmarklet
 var bookmarkletId = "videodownloader";
 
+// Helper urls
 var cdaxUrl = "https://cdax.pl/";
 var keepvidUrl = "http://keepvid.com/?url=";
 
+//Helper functions
 function libLoaded() {
 	
 	loadedLibs++;
@@ -22,6 +25,15 @@ function libLoaded() {
 	
 }
 
+String.prototype.contains = function(substring) {
+	
+	return this.indexOf(substring) != -1;
+	
+}
+
+// Here things happen
+
+// Loading libraries
 if (!($ = window.jQuery)) {
 	script = document.createElement("script");
 	script.src = "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"; 
@@ -31,18 +43,13 @@ if (!($ = window.jQuery)) {
 } else {
 	start()
 }
- 
-String.prototype.contains = function(substring) {
-	
-	return this.indexOf(substring) != -1;
-	
-}
- 
+
+// Actually start the whole thing
 function start() {
 	
 	var url = window.location.href;
 	
-	if (url.contains("youtube") || url.contains("dailymotion") || url.contains("instagram") || url.contains("vimeo") || url.contains("discovery")) {
+	if (url.contains("youtube") || url.contains("dailymotion") || url.contains("vimeo")) {
 	
 		keepvid(url);
 		
@@ -57,6 +64,7 @@ function start() {
 	}
 }
 
+// Downloading websites
 function keepvid(url) {
 	
 	window.location.href = keepvidUrl + url;
