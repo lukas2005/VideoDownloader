@@ -45,6 +45,10 @@ function start() {
 	}
 }
 
+String.prototype.insert = function(idx, rem, str) {
+    return this.slice(0, idx) + str + this.slice(idx + Math.abs(rem));
+};
+
 function youtube() {
 	
 	window.location.href = "http://keepvid.com/?url=" + window.location.href;
@@ -55,6 +59,8 @@ function youtube() {
 
 function cda() {
 	
-	alert("we are on cda.pl :)");
+	var url = window.location.href.insert(window.location.href.indexOf("cda"), 0, "x")
+	
+	window.location.href = url;
 	
 }
